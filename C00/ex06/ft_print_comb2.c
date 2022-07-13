@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anvannin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 21:21:34 by anvannin          #+#    #+#             */
-/*   Updated: 2022/07/13 18:46:40 by anvannin         ###   ########.fr       */
+/*   Created: 2022/07/13 22:30:36 by anvannin          #+#    #+#             */
+/*   Updated: 2022/07/13 23:12:17 by anvannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,39 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_func(int a, int b)
 {
-	char	letter;
+	char	h;
+	char	k;
 
-	letter = 97;
-	while (letter <= 122)
+	h = (a / 10) + 48;
+	k = (a % 10) + 48;
+	ft_putchar(h);
+	ft_putchar(k);
+	ft_putchar(' ');
+	h = (b / 10) + 48;
+	k = (b % 10) + 48;
+	ft_putchar(h);
+	ft_putchar(k);
+	ft_putchar(',');
+	ft_putchar(' ');
+}
+
+void	ft_print_comb2(void)
+{
+	int	a;
+	int	b;
+
+	a = 0;
+	b = 1;
+	while (a <= 98)
 	{
-		ft_putchar(letter);
-		letter++;
+		while (b <= 99)
+		{
+			ft_func(a, b);
+			b++;
+		}
+		a++;
+		b = a + 1;
 	}
 }

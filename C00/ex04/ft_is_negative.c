@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anvannin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 21:21:34 by anvannin          #+#    #+#             */
-/*   Updated: 2022/07/13 18:46:40 by anvannin         ###   ########.fr       */
+/*   Created: 2022/07/13 19:07:06 by anvannin          #+#    #+#             */
+/*   Updated: 2022/07/13 21:24:22 by anvannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_is_negative(int n)
 {
-	char	letter;
-
-	letter = 97;
-	while (letter <= 122)
+	if (n >= 0)
 	{
-		ft_putchar(letter);
-		letter++;
+		ft_putchar('P');
+	}
+	else
+	{
+		ft_putchar('N');
 	}
 }

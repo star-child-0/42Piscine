@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anvannin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 21:21:34 by anvannin          #+#    #+#             */
-/*   Updated: 2022/07/13 18:46:40 by anvannin         ###   ########.fr       */
+/*   Created: 2022/07/13 21:25:13 by anvannin          #+#    #+#             */
+/*   Updated: 2022/07/13 22:08:24 by anvannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,42 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_function(int i, int j, int k)
 {
-	char	letter;
+	char	c;
 
-	letter = 97;
-	while (letter <= 122)
+	c = i + 48;
+	ft_putchar(c);
+	c = j + 48;
+	ft_putchar(c);
+	c = k + 48;
+	ft_putchar(c);
+	ft_putchar(',');
+	ft_putchar(' ');
+}
+
+void	ft_print_comb(void)
+{
+	int	i;
+	int	j;
+	int	k;
+
+	i = 0;
+	j = 1;
+	k = 2;
+	while (i < 8)
 	{
-		ft_putchar(letter);
-		letter++;
+		while (j < 9)
+		{
+			while (k <= 9)
+			{
+				ft_function(i, j, k);
+				k++;
+			}
+			j++;
+			k = j + 1;
+		}
+		j = i + 1;
+		i++;
 	}
 }
