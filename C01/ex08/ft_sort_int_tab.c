@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anvannin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 21:51:27 by anvannin          #+#    #+#             */
-/*   Updated: 2022/07/16 19:43:39 by anvannin         ###   ########.fr       */
+/*   Created: 2022/07/17 21:12:39 by anvannin          #+#    #+#             */
+/*   Updated: 2022/07/17 21:35:41 by anvannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	write(1, &c, 1);
-}
+	int	i;
+	int	t;
 
-void	ft_print_combn(int n)
-{
+	i = 0;
+	while (i < size -1)
+	{
+		while (i < size - i -1)
+		{
+			if (tab[i] > tab[i + 1])
+			{
+				t = tab[i];
+				tab[i] = tab[i + 1];
+				tab[i + 1] = t;
+			}
+			i++;
+		}
+	}
 }

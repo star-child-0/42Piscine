@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anvannin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 21:51:27 by anvannin          #+#    #+#             */
-/*   Updated: 2022/07/16 19:43:39 by anvannin         ###   ########.fr       */
+/*   Created: 2022/07/17 20:43:29 by anvannin          #+#    #+#             */
+/*   Updated: 2022/07/17 21:11:40 by anvannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	write(1, &c, 1);
-}
+	int	i;
+	int	t;
 
-void	ft_print_combn(int n)
-{
+	i = 0;
+	while (i < size / 2)
+	{
+		t = tab[i];
+		tab[i] = tab[size -1 - i];
+		tab[size -1 - i] = t;
+		i++;
+	}
 }

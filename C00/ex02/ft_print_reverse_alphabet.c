@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*   ft_reverse_alphabet.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anvannin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 21:51:27 by anvannin          #+#    #+#             */
-/*   Updated: 2022/07/16 19:43:39 by anvannin         ###   ########.fr       */
+/*   Created: 2022/07/13 18:49:45 by anvannin          #+#    #+#             */
+/*   Updated: 2022/07/16 18:52:46 by anvannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_print_reverse_alphabet(void)
 {
-	write(1, &c, 1);
-}
+	char	c;
 
-void	ft_print_combn(int n)
-{
+	c = 122;
+	while (c >= 97)
+	{
+		write(1, &c, 1);
+		c--;
+	}
 }

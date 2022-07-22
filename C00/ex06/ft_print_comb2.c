@@ -6,7 +6,7 @@
 /*   By: anvannin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 22:30:36 by anvannin          #+#    #+#             */
-/*   Updated: 2022/07/13 23:12:17 by anvannin         ###   ########.fr       */
+/*   Updated: 2022/07/16 19:00:04 by anvannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,11 @@ void	ft_func(int a, int b)
 	k = (b % 10) + 48;
 	ft_putchar(h);
 	ft_putchar(k);
-	ft_putchar(',');
-	ft_putchar(' ');
+	if (!(a == 98 && b == 99))
+	{
+		ft_putchar(',');
+		ft_putchar(' ');
+	}
 }
 
 void	ft_print_comb2(void)

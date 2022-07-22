@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anvannin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 21:51:27 by anvannin          #+#    #+#             */
-/*   Updated: 2022/07/16 19:43:39 by anvannin         ###   ########.fr       */
+/*   Created: 2022/07/17 20:38:19 by anvannin          #+#    #+#             */
+/*   Updated: 2022/07/17 20:39:25 by anvannin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-}
+	int	i;
 
-void	ft_print_combn(int n)
-{
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
